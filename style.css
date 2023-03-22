@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background-color:rgb(32, 38, 68);
+    font-family: sans-serif;
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+input[type="color"]{
+    border: none;
+    width: 32.5%;
+    height: 40px;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.qr-text{
+    padding: 1rem;
+    display: block;
+    background-color: rgb(41, 49, 92);
+    border: 1px solid rgb(91, 99, 148);
+    border-radius: 4px;
+    width: 100%;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+#qr-code{
+    height: 400px;
+    width: 400px;
+    max-width: 1000px;
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(91, 99, 148);
+    border-radius: 4px;
+}
+
+#qr-code img, #qr-code canvas{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sizes{
+    width: 32.5%;
+    height: 40px;
+    color: white;
+    background-color: rgb(41, 49, 92);
+    border: 1px solid rgb(91, 99, 148);
+    border-radius: 4px;
+    outline: none;
+}
+
+.action-container{
+    display: flex;
+    margin: 1rem 0;
+}
+
+.btn{
+    color: white;
+    max-width: 200px;
+    padding: 14px;
+    background-color: blueviolet;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.btn-share{
+    margin-left: 0.7rem;
+}
+
+.img {
+    display: inline-block;
+    width: 20px;
+    margin-left: 10px;
+}
+
+@media(max-width: 512px){
+    body{
+        max-width: 100%;
+        padding: 10px;
+    }
+    #qr-code{
+        width: 95vw;
+        height: 95vw;
+    }
+
+    #qr-code img, #qr-code canvas{
+        max-width: 95vw !important;
+        max-height: 95vw !important;
+    }
+    .btn{
+        min-width: inset;
+    }
+}
+
+@media(max-width: 350px){
+    .action-container{
+        flex-direction: column;
+    }
+    .btn-share{
+        margin-left: 0;
+        margin-top: 0.7rem;
+    }
+}
